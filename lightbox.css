@@ -1,0 +1,122 @@
+/*  JavaScript 7th Edition
+    Chapter 5
+    Chapter Case
+
+    Filename: lightbox.css
+*/
+
+
+/* --------------------------------------------------------------*/
+/* Styles for the slideshow box containing the images and tools  */
+/* --------------------------------------------------------------*/
+
+/* Styles for the box containing the slideshow and tools */
+div#lightbox {
+   position: relative;
+   width: 960px;
+   height: 455px;
+   margin: 5em 0 5em 0;
+}
+
+/* Styles for slideshow title */
+div#lightbox h1#lbTitle {
+   width: 100%;
+   text-align: center;
+   font-size: 2.4em;
+   font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+   margin: 0 0 20px 0;
+}
+
+/* Styles for the left and right arrows to move through the slideshow */
+div#lightbox div#lbPrev, div#lightbox div#lbNext {
+   position: absolute;
+   height: 30px;
+   color: transparent;
+   -webkit-text-stroke-width: 3px;
+   -webkit-text-stroke-color: white;   
+   top: 50%;
+   line-height: 30px;
+   text-align: center;
+   font-size: 5em;
+   z-index: 1;
+   background: black;
+   cursor: pointer;
+   user-select: none;
+
+   -webkit-transition: color 0.4s;
+   -moz-transition:    color 0.4s;
+   -ms-transition:     color 0.4s;
+   -o-transition:      color 0.4s;
+   transition:         color 0.4s;
+   
+}
+
+/* Hovering styles for the left and right arrows */
+div#lightbox div#lbPrev:hover, div#lightbox div#lbNext:hover {
+   color: white;
+
+   
+}
+
+/* Horizontal position of the left arrow */
+div#lightbox > div#lbPrev {
+   left: -2em;
+}
+
+/* Horizontal position of the right arrow */
+div#lightbox div#lbNext {
+   right: -2em;
+}
+
+/* Styles for the box containing slide images */
+div#lightbox div#lbImages {
+   display: flex;
+   flex-direction: row;     /* Place images within a flexbox on a single row */
+   flex-wrap: nowrap;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;        /* Hide images which overflow the box border */
+}
+
+/* Styles for the box containing the slide counter */
+div#lightbox div#lbCounter {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 1;
+   line-height: 20px;
+   font-size: 20px;
+   background-color: rgba(0,0,0,0.5);
+   border-radius: 4px;
+   text-align: center;
+   color: white;
+   font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+   padding: 1em;
+   user-select: none;
+}
+#lbImages {
+   height: 5em;
+}
+
+/* Styles for images within the slideshow box */
+div#lbImages img {
+   display: block;
+   width: auto;
+   height: auto;
+   margin-right: 13px;
+   filter: opacity(0.8);
+   cursor: pointer;
+   user-select: none;   
+}
+
+/* Hovering styles for images within the slideshow box */
+div#lbImages img:hover {
+   filter: opacity(1);
+   transition:         filter 0.4s;
+   -webkit-transition: filter 0.4s;
+   -moz-transition:    filter 0.4s;
+   -ms-transition:     filter 0.4s;
+   -o-transition:      filter 0.4s;
+}
+
