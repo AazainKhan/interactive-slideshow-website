@@ -1,10 +1,3 @@
-/*  JavaScript 7th Edition
-    Chapter 5
-    Chapter Case
-
-    Filename: lightbox.css
-*/
-
 
 /* --------------------------------------------------------------*/
 /* Styles for the slideshow box containing the images and tools  */
@@ -28,12 +21,13 @@ div#lightbox h1#lbTitle {
 }
 
 /* Styles for the left and right arrows to move through the slideshow */
-div#lightbox div#lbPrev, div#lightbox div#lbNext {
+div#lightbox div#lbPrev,
+div#lightbox div#lbNext {
    position: absolute;
    height: 30px;
    color: transparent;
    -webkit-text-stroke-width: 3px;
-   -webkit-text-stroke-color: white;   
+   -webkit-text-stroke-color: white;
    top: 50%;
    line-height: 30px;
    text-align: center;
@@ -44,22 +38,23 @@ div#lightbox div#lbPrev, div#lightbox div#lbNext {
    user-select: none;
 
    -webkit-transition: color 0.4s;
-   -moz-transition:    color 0.4s;
-   -ms-transition:     color 0.4s;
-   -o-transition:      color 0.4s;
-   transition:         color 0.4s;
-   
+   -moz-transition: color 0.4s;
+   -ms-transition: color 0.4s;
+   -o-transition: color 0.4s;
+   transition: color 0.4s;
+
 }
 
 /* Hovering styles for the left and right arrows */
-div#lightbox div#lbPrev:hover, div#lightbox div#lbNext:hover {
+div#lightbox div#lbPrev:hover,
+div#lightbox div#lbNext:hover {
    color: white;
 
-   
+
 }
 
 /* Horizontal position of the left arrow */
-div#lightbox > div#lbPrev {
+div#lightbox>div#lbPrev {
    left: -2em;
 }
 
@@ -71,11 +66,13 @@ div#lightbox div#lbNext {
 /* Styles for the box containing slide images */
 div#lightbox div#lbImages {
    display: flex;
-   flex-direction: row;     /* Place images within a flexbox on a single row */
+   flex-direction: row;
+   /* Place images within a flexbox on a single row */
    flex-wrap: nowrap;
    width: 100%;
    height: 100%;
-   overflow: hidden;        /* Hide images which overflow the box border */
+   overflow: hidden;
+   /* Hide images which overflow the box border */
 }
 
 /* Styles for the box containing the slide counter */
@@ -87,7 +84,7 @@ div#lightbox div#lbCounter {
    z-index: 1;
    line-height: 20px;
    font-size: 20px;
-   background-color: rgba(0,0,0,0.5);
+   background-color: rgba(0, 0, 0, 0.5);
    border-radius: 4px;
    text-align: center;
    color: white;
@@ -95,6 +92,7 @@ div#lightbox div#lbCounter {
    padding: 1em;
    user-select: none;
 }
+
 #lbImages {
    height: 5em;
 }
@@ -107,16 +105,15 @@ div#lbImages img {
    margin-right: 13px;
    filter: opacity(0.8);
    cursor: pointer;
-   user-select: none;   
+   user-select: none;
 }
 
 /* Hovering styles for images within the slideshow box */
 div#lbImages img:hover {
    filter: opacity(1);
-   transition:         filter 0.4s;
+   transition: filter 0.4s;
    -webkit-transition: filter 0.4s;
-   -moz-transition:    filter 0.4s;
-   -ms-transition:     filter 0.4s;
-   -o-transition:      filter 0.4s;
+   -moz-transition: filter 0.4s;
+   -ms-transition: filter 0.4s;
+   -o-transition: filter 0.4s;
 }
-
