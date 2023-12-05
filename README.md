@@ -1,7 +1,5 @@
 # interactive-slideshow-website
 
-[Interactive Slideshow](https://aazainkhan.github.io/interactive-slideshow-website/)
-
 COMP 125 - Assignment 2 - Winter 2023
 
 This website showcases an interactive slideshow built using HTML, CSS, and JS.
